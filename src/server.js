@@ -22,8 +22,9 @@ const init = async () => {
       validator: NotesValidator,
     },
   });
+
   await server.start();
-  console.log(`Server Berjalan pada ${server.info.uri}`);
+  console.log(`Server berjalan pada ${server.info.uri}`);
 };
 
 init();

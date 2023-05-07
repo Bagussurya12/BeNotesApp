@@ -1,4 +1,3 @@
-const { server } = require("@hapi/hapi");
 const NotesHandler = require("./handler");
 const routes = require("./routes");
 
