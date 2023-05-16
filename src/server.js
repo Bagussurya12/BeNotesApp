@@ -9,7 +9,7 @@ const NotesValidator = require("./validator/notes");
 //users
 const users = require("./api/users");
 const UsersValidator = require("./validator/users");
-const UsersServices = require("./services/postgres/UsersService");
+const UsersService = require("./services/postgres/UsersService");
 // authentications
 const authentications = require("./api/authentications");
 const AuthenticationsService = require("./services/postgres/AuthenticationsService");
@@ -18,7 +18,7 @@ const AuthenticationsValidator = require("./validator/authentications");
 
 const init = async () => {
   const notesService = new NotesService();
-  const usersService = new UsersServices();
+  const usersService = new UsersService();
   const authenticationsService = new AuthenticationsService();
 
   const server = Hapi.server({

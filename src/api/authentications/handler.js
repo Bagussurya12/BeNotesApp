@@ -21,6 +21,7 @@ class AuthenticationsHandler {
 
       const accessToken = this._tokenManager.generateAccessToken({ id });
       const refreshToken = this._tokenManager.generateRefreshToken({ id });
+
       await this._authenticationsService.addRefreshToken(refreshToken);
 
       const response = h.response({
@@ -34,7 +35,6 @@ class AuthenticationsHandler {
       response.code(201);
       return response;
     } catch (error) {
-      //console.log(error);
       if (error instanceof ClientError) {
         const response = h.response({
           status: "fail",
